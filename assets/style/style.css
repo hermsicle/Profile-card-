@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color-1: hsl(185, 75%, 39%); 
+    --primary-color-2: hsl(229, 23%, 23%);
+    --primary-color-3: hsl(225, 4%, 64%);
+    --neutral-color: hsla(0, 0%, 59%, 0.209);
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background: var(--primary-color-1);
+}
+
+.card-outer {
+    display: relative;
+    /* border: 1px solid black; */
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    position: relative;
+}
+
+.svg-top {
+    position: fixed;
+    /* border: 1px solid black; */
+    z-index: -1;
+    top: -500px;
+    left: -750px;
+}
+.svg-bottom {
+    position: fixed;
+    z-index: -1;
+    bottom: -500px;
+    right: -750px;
+}
+
+.card {
+    width: 325px;
+    background: whitesmoke;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.card-top .svg {
+    width: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card-middle img{
+    position: absolute;
+    left: 50%;
+    top: 23%;
+    transform: translateX(-50%);
+    border-radius: 100%;
+    border: 0.25rem solid whitesmoke;
+}
+
+.card-middle {
+    padding-top: 4.75rem;
+    text-align: center;
+}
+.card-middle h1 {
+    font-size: 1.15rem;
+    letter-spacing: 1px;
+}
+.card-middle span {
+    font-weight: 400;
+    color: var(--primary-color-3);
+}
+.card-middle p {
+    color: var(--primary-color-3);
+    margin-top: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+
+.card-bottom {
+    display: flex;
+    border-top: 1px solid var(--neutral-color);
+    padding: 1.75rem 2.5rem;
+    justify-content: space-between;
+}
+
+.container {
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 1.15rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+.container p {
+    font-size: 0.75rem;
+    color: var(--primary-color-3);
+    letter-spacing: 1px;
+}
+
+
+@media (min-width: 800px) {
+    .svg-top {
+        top: -500px;
+        left: -500px;
+    }
+    .svg-bottom {
+        bottom: -500px;
+        right: -500px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .svg-top {
+        top: -500px;
+        left: -400px;
+    }
+    .svg-bottom {
+        bottom: -500px;
+        right: -400px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .svg-top {
+        top: -500px;
+        left: -200px;
+    }
+    .svg-bottom {
+        bottom: -500px;
+        right: -200px;
+    }
+}
